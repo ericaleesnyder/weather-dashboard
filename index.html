@@ -1,0 +1,178 @@
+<!-- Steps: -->
+<!-- 1: build basic html with placeholder content-->
+<!-- 2: build basic css (start with API content and then add/edit in my stylesheet at the END of everything) -->
+<!-- 3: remove placeholder content and replace with content from API via JS-->
+
+<!-- REQUIREMENTS: -->
+<!-- 1: search bar for city
+2: search history is saved to local storage and displayed under search history section as a button 
+3:  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- link style sheets - APIs BEFORE our stylesheet -->
+    <!-- dont need a reset api if using bootstrap - bootstrap has one built in -->
+</head>
+<body>
+    <header class="text-center">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <aside class="col-3">                
+                <h3>Search:</h3>
+                <div class="d-grid gap-2 border-btm">
+                    <input class="form-control" type="text" placeholder="City Name">
+                    <!-- <button class="btn btn-primary" type="button">Button</button> -->
+                    <button class="btn btn-primary" type="button">Button</button>
+                </div>
+                <br>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Search History 1</button>
+                    <button class="btn btn-primary" type="button">Search History 2</button>
+                  </div>
+            </aside>
+            <section class="col-9">
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="card border-info mb-3">
+                            <div class="card-header">City Name</div>
+                            <div class="card-body">
+                                <p>date</p>
+                                <p>weather icon</p>
+                                <p>temperature</p>
+                                <p>humidity</p>
+                                <p>wind speed</p>
+                                <p>uv index</p>
+                            </div>
+                        </div>
+                    </div><!--weather results for the city-->
+                </div>
+                <!-- <div class="row"> -->
+                    <!-- <div class="card border-info mb-3 col">
+                        <div class="card-header">Day 1</div>
+                        <div class="card-body">
+                            <p class="card-text">current weather icon</p>
+                            <p class="card-text">temperature</p>
+                            <p class="card-text">Wind Speed</p>
+                            <p class="card-text">humidity</p>
+                        </div>
+                    </div>
+                
+                    <div class="card border-info mb-3 col">
+                        <div class="card-header">Day 2</div>
+                        <div class="card-body">
+                            <p class="card-text">current weather icon</p>
+                            <p class="card-text">temperature</p>
+                            <p class="card-text">Wind Speed</p>
+                            <p class="card-text">humidity</p>
+                        </div>
+                    </div>
+                
+                    <div class="card border-info mb-3 col">
+                        <div class="card-header">Day 3</div>
+                        <div class="card-body">
+                            <p class="card-text">current weather icon</p>
+                            <p class="card-text">temperature</p>
+                            <p class="card-text">Wind Speed</p>
+                            <p class="card-text">humidity</p>
+                        </div>
+                    </div>
+                
+                    <div class="card border-info mb-3 col">
+                        <div class="card-header">Day 4</div>
+                        <div class="card-body">
+                            <p class="card-text">current weather icon</p>
+                            <p class="card-text">temperature</p>
+                            <p class="card-text">Wind Speed</p>
+                            <p class="card-text">humidity</p>
+                        </div>
+                    </div>
+                
+                    <div class="card border-info mb-3 col">
+                        <div class="card-header">Day 5</div>
+                        <div class="card-body">
+                        </div>
+                    </div> -->
+                    
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-info mb-3">
+                                <div class="card-header">Day 1</div>
+                                <div class="card-body">
+                                    <p class="card-text">current weather icon</p>
+                                    <p class="card-text">temperature</p>
+                                    <p class="card-text">Wind Speed</p>
+                                    <p class="card-text">humidity</p>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="col">
+                            <div class="card border-info mb-3">
+                                <div class="card-header">Day 2</div>
+                                <div class="card-body">
+                                    <p class="card-text">current weather icon</p>
+                                    <p class="card-text">temperature</p>
+                                    <p class="card-text">Wind Speed</p>
+                                    <p class="card-text">humidity</p>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="col">
+                            <div class="card border-info mb-3">
+                                <div class="card-header">Day 3</div>
+                                <div class="card-body">
+                                    <p class="card-text">current weather icon</p>
+                                    <p class="card-text">temperature</p>
+                                    <p class="card-text">Wind Speed</p>
+                                    <p class="card-text">humidity</p>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="col">
+                            <div class="card border-info mb-3">
+                                <div class="card-header">Day 4</div>
+                                <div class="card-body">
+                                    <p class="card-text">current weather icon</p>
+                                    <p class="card-text">temperature</p>
+                                    <p class="card-text">Wind Speed</p>
+                                    <p class="card-text">humidity</p>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="col">
+                            <div class="card border-info mb-3">
+                                <div class="card-header">Day 5</div>
+                                <div class="card-body">
+                                    <p class="card-text">current weather icon</p>
+                                    <p class="card-text">temperature</p>
+                                    <p class="card-text">Wind Speed</p>
+                                    <p class="card-text">humidity</p>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                       
+                    <!--5day forecast day 1-->
+                    <!--5day forecast day 2-->
+                    <!--5day forecast day 3-->
+                    <!--5day forecast day 4-->
+                    <!--5day forecast day 5-->
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Link JS files - API's BEFORE our script file -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

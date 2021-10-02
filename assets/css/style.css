@@ -1,0 +1,14 @@
+.btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.border-btm {
+    padding: 15px 0;
+    border-bottom: solid 1px lightgrey;
+}
+
+.container-fluid {
+    margin: 10px 0px;
+}
+
