@@ -36,7 +36,7 @@ function getWeather () {
 
   nameHeader.innerHTML=cityName;
   
-  var requestCoord = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName + "&limit=1&appid=5c0c4fce484144270b0ea96cd07f8e98"
+  var requestCoord = "https://api.openweathermap.org/geo/1.0/direct?q="+ cityName + "&limit=1&appid=5c0c4fce484144270b0ea96cd07f8e98"
   fetch(requestCoord)
   .then(function(response) {
     return response.json()
@@ -61,12 +61,12 @@ function getWeather () {
           var forecastIcon4 = data.daily[3].weather[0].icon;
           var forecastIcon5 = data.daily[4].weather[0].icon;
         
-          weatherIcon[0].setAttribute('src', "http://openweathermap.org/img/w/"+currentIcon+".png");
-          weatherIcon[1].setAttribute('src', "http://openweathermap.org/img/w/"+forecastIcon1+".png");
-          weatherIcon[2].setAttribute('src', "http://openweathermap.org/img/w/"+forecastIcon2+".png");
-          weatherIcon[3].setAttribute('src', "http://openweathermap.org/img/w/"+forecastIcon3+".png");
-          weatherIcon[4].setAttribute('src', "http://openweathermap.org/img/w/"+forecastIcon4+".png");
-          weatherIcon[5].setAttribute('src', "http://openweathermap.org/img/w/"+forecastIcon5+".png");
+          weatherIcon[0].setAttribute('src', "https://openweathermap.org/img/w/"+currentIcon+".png");
+          weatherIcon[1].setAttribute('src', "https://openweathermap.org/img/w/"+forecastIcon1+".png");
+          weatherIcon[2].setAttribute('src', "https://openweathermap.org/img/w/"+forecastIcon2+".png");
+          weatherIcon[3].setAttribute('src', "https://openweathermap.org/img/w/"+forecastIcon3+".png");
+          weatherIcon[4].setAttribute('src', "https://openweathermap.org/img/w/"+forecastIcon4+".png");
+          weatherIcon[5].setAttribute('src', "https://openweathermap.org/img/w/"+forecastIcon5+".png");
             
           //TEMP
           var currentTemp = data.current.temp;
