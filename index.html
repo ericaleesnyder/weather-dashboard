@@ -1,13 +1,3 @@
-<!-- Steps: -->
-<!-- 1: build basic html with placeholder content-->
-<!-- 2: build basic css (start with API content and then add/edit in my stylesheet at the END of everything) -->
-<!-- 3: remove placeholder content and replace with content from API via JS-->
-
-<!-- REQUIREMENTS: -->
-<!-- 1: search bar for city
-2: search history is saved to local storage and displayed under search history section as a button 
-3:  -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +13,7 @@
   <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-  
+
 </head>
 
 <body>
@@ -34,9 +24,9 @@
     <div class="row">
       <aside class="col-3">
         <h3>Search:</h3>
-        <form class="d-grid gap-2 border-btm">
+        <form class="d-grid gap-2 border-btm" id="search-form">
           <input class="form-control" type="text" placeholder="City Name" id="city-name">
-          <button class="btn btn-primary" type="submit" id="submit">Search</button>
+          <button class="btn btn-primary" type="submit">Search</button>
         </form>
         <br>
         <div class="d-grid gap-2" id="search-history">

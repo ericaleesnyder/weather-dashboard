@@ -1,5 +1,4 @@
 var results = document.getElementById("results");
-var submitBtn = document.getElementById("submit");  
 var weatherIcon = document.getElementsByClassName('weather-icon');
 var temp = document.querySelectorAll('.temp');
 var humid = document.querySelectorAll('.humid');
@@ -8,7 +7,8 @@ var uvIndex = document.getElementById('uv-index');
 var cityName = document.getElementById("city-name");
 var nameHeader = document.getElementById("name-header");
 var date = document.getElementsByClassName('date');
-var searchHistory = document.getElementById('search-history')
+var searchHistory = document.getElementById('search-history');
+var searchForm = document.getElementById('search-form');
 
 var citiesSearched =[];
 
@@ -186,7 +186,7 @@ searchHistory.addEventListener('click', function(event){
   }
 })
 
-submitBtn.addEventListener('click', function (event) {
+searchForm.addEventListener('submit', function (event) {
 
   event.preventDefault();
   
