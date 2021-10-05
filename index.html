@@ -20,8 +20,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- link style sheets - APIs BEFORE our stylesheet -->
-  <!-- dont need a reset api if using bootstrap - bootstrap has one built in -->
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  
 </head>
 
 <body>
@@ -32,83 +34,83 @@
     <div class="row">
       <aside class="col-3">
         <h3>Search:</h3>
-        <div class="d-grid gap-2 border-btm">
+        <form class="d-grid gap-2 border-btm">
           <input class="form-control" type="text" placeholder="City Name" id="city-name">
-          <button class="btn btn-primary" type="button" id="submit">Button</button>
-        </div>
+          <button class="btn btn-primary" type="submit" id="submit">Search</button>
+        </form>
         <br>
-        <div class="d-grid gap-2">
-          <button class="btn btn-primary" type="button">Search History 1</button>
-          <button class="btn btn-primary" type="button">Search History 2</button>
+        <div class="d-grid gap-2" id="search-history">
         </div>
       </aside>
       <section class="col-9" style="display: none" id="results">
         <div class="row">
           <div class="col-12">
             <div class="card border-info mb-3" id='current-weather'>
-              <div class="card-header" id="name-header"></div>
+              <h2 class="card-header" id="name-header"></h2>
               <div class="card-body">
-                <p>date</p>
+                <h3 class="date"></h3>
                 <img class="weather-icon" src=""></img>
                 <p class="temp"></p>
-                <p class="humid">humidity</p>
-                <p class="wind">wind speed</p>
-                <p id="uv-index">uv index</p>
+                <p class="humid"></p>
+                <p class="wind"></p>
+                <div>UV Index:
+                  <p id="uv-index"></p>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-info mb-3">
-              <div class="card-header">Day 1</div>
+              <h3 class="card-header date"></h3>
               <div class="card-body">
                 <img class="card-text weather-icon"></img>
                 <p class="card-text temp"></p>
-                <p class="card-text wind">Wind Speed</p>
-                <p class="card-text humid">humidity</p>
+                <p class="card-text wind"></p>
+                <p class="card-text humid"></p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-info mb-3">
-              <div class="card-header">Day 2</div>
+              <h3 class="card-header date"></h3>
               <div class="card-body">
                 <img class="card-text weather-icon"></img>
                 <p class="card-text temp"></p>
-                <p class="card-text wind">Wind Speed</p>
-                <p class="card-text humid">humidity</p>
+                <p class="card-text wind"></p>
+                <p class="card-text humid"></p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-info mb-3">
-              <div class="card-header">Day 3</div>
+              <h3 class="card-header date"></h3>
               <div class="card-body">
                 <img class="card-text weather-icon"></img>
                 <p class="card-text temp"></p>
-                <p class="card-text wind">Wind Speed</p>
-                <p class="card-text humid">humidity</p>
+                <p class="card-text wind"></p>
+                <p class="card-text humid"></p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-info mb-3">
-              <div class="card-header">Day 4</div>
+              <h3 class="card-header date"></h3>
               <div class="card-body">
                 <img class="card-text weather-icon"></img>
                 <p class="card-text temp"></p>
-                <p class="card-text wind">Wind Speed</p>
-                <p class="card-text humid">humidity</p>
+                <p class="card-text wind"></p>
+                <p class="card-text humid"></p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-info mb-3">
-              <div class="card-header">Day 5</div>
+              <h3 class="card-header date"></h3>
               <div class="card-body">
                 <img class="card-text weather-icon"></img>
                 <p class="card-text temp"></p>
-                <p class="card-text wind">Wind Speed</p>
-                <p class="card-text humid">humidity</p>
+                <p class="card-text wind"></p>
+                <p class="card-text humid"></p>
               </div>
             </div>
           </div>

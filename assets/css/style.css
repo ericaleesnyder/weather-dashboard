@@ -12,3 +12,8 @@
   margin: 10px 0px;
 }
 
+#uv-index{
+  width: fit-content;
+  padding: .5rem;
+  border-radius: 5px;
+}
